@@ -1,0 +1,201 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Header</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="dark-header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <!-- Rest of your page content goes here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>tolget booth system </h1>
+            </h1>
+            <p>Your message or value proposition here.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="feature">
+            <h2>Feature 1</h2>
+            <p>Description of the first feature.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 2</h2>
+            <p>Description of the second feature.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 3</h2>
+            <p>Description of the third feature.</p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <p>Choose the plan that's right for you.</p>
+        <div class="pricing-plans">
+            <!-- Add pricing plan details here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or need assistance? Contact us!</p>
+        <form>
+            <!-- Add a contact form here -->
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for styling the About section */
+    #about-section {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    #about-content {
+      font-size: 18px;
+      color: #333;
+    }
+    #show-more-button {
+      background-color: #0074d9;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <section id="about-section">
+    <h2>About Us</h2>
+    <p id="about-content">
+      We are a team of passionate individuals dedicated to providing high-quality solutions for our clients. Our mission is to make a difference in the world through innovation and technology.
+    </p>
+    <button id="show-more-button">Show More</button>
+  </section>
+
+  <script>
+    // JavaScript for adding interactivity
+    const aboutContent = document.getElementById('about-content');
+    const showMoreButton = document.getElementById('show-more-button');
+    let isExpanded = false;
+
+    showMoreButton.addEventListener('click', () => {
+      if (isExpanded) {
+        aboutContent.innerHTML = "We are a team of passionate individuals dedicated to providing high-quality solutions for our clients. Our mission is to make a difference in the world through innovation and technology.";
+        showMoreButton.textContent = "Show More";
+      } else {
+        aboutContent.innerHTML = "Our dedicated team has a diverse set of skills and expertise. We believe in collaboration, creativity, and continuous learning to achieve our goals.";
+        showMoreButton.textContent = "Show Less";
+      }
+      isExpanded = !isExpanded;
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for styling the Contact section */
+    #contact-section {
+      background-color: #f7f7f7;
+      padding: 20px;
+      text-align: center;
+    }
+    #contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input[type="text"], textarea, input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #0074d9;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <section id="contact-section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <script>
+    // JavaScript for handling form submission
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent the default form submission behavior
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // You can implement your own logic here to handle the form data, e.g., send it to a server or display a confirmation message.
+      alert(`Thank you, ${name}! Your message has been sent:\nEmail: ${email}\nMessage: ${message}`);
+      
+      // Reset the form
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
